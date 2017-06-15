@@ -8,11 +8,11 @@ class Student(object):
 
 def studentToDict(stu):
 	return {
-		'name' : stu.name
-		'age'  : stu.age
-		'score' : stu.score
+		'name': stu.name,
+		'age': stu.age,
+		'score': stu.score
 	}
 
-
+s = Student('Jaeger',25,100)
 print (json.dumps(s, default=studentToDict))
 print (json.dumps(s, default=lambda obj:obj.__dict__))
